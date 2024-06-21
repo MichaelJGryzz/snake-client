@@ -20,6 +20,14 @@ const connect = function() {
     console.error('Connection error:', error);
   });
 
+  // "connect" event handler to print a message when connected to server successfully
+  conn.on('connect', () => {
+    console.log("Successfully connected to the game server");
+
+    // send player initials to the server
+    conn.write("Name: MJG");
+  });
+
   return conn;
 };
 
