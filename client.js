@@ -26,6 +26,10 @@ const connect = function() {
 
     // send player initials to the server
     conn.write("Name: MJG");
+
+    // send move up command to the server
+    // conn.write("Move: up");
+    
   });
 
   return conn;
