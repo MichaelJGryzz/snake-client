@@ -33,7 +33,7 @@ const handleUserInput = function(key) {
   } else if (key === "4") {
     connection.write("Say: Almost had you!"); // send "Almost had you!" to the server
   } else if (key === "5") {
-    connection.write("Say: Better luck next time!"); // send "Better luck next time!" to the server
+    connection.write("Say: I'm a snaaaake!"); // send "Better luck next time!" to the server
   } else if (key === "6") {
     connection.write("Say: Woohoo!"); // send "Woohoo!" to the server
   } else if (key === "7") {
