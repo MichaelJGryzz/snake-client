@@ -1,4 +1,4 @@
-// import four movement constants from constants.js
+// import four movement constants and "MESSAGES" object from constants.js
 const { MOVE_UP , MOVE_LEFT, MOVE_DOWN , MOVE_RIGHT, MESSAGES } = require("./constants");
 
 // stores the active TCP connection object

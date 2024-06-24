@@ -1,7 +1,7 @@
 const net = require("net");
 
 // import IP and PORT constants from constants.js
-const { IP , PORT } = require("./constants");
+const { IP , PORT , PLAYER_INITIALS } = require("./constants");
 
 // establishes a connection with the game server
 const connect = function() {
@@ -28,11 +28,7 @@ const connect = function() {
     console.log("Successfully connected to the game server");
 
     // send player initials to the server
-    conn.write("Name: MJG");
-
-    // uncomment below if you want to test the "up" movement command directly on connection
-    // conn.write(MOVE_UP);
-    
+    conn.write(PLAYER_INITIALS);
   });
 
   return conn;
