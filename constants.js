@@ -4,6 +4,9 @@ const IP = 'localhost';
 // constant for the PORT number
 const PORT = 50541;
 
+// constant for player initials
+const PLAYER_INITIALS = "Name: MJG";
+
 // constants for movement
 const MOVE_UP = "Move: up";
 const MOVE_LEFT = "Move: left";
@@ -27,6 +30,7 @@ const MESSAGES = {
 module.exports = {
   IP,
   PORT,
+  PLAYER_INITIALS,
   MOVE_UP,
   MOVE_LEFT,
   MOVE_DOWN,
