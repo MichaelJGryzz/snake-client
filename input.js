@@ -24,7 +24,27 @@ const handleUserInput = function(key) {
     connection.write("Move: down"); // send move down command to the server
   } else if (key === "d") {
     connection.write("Move: right"); // send move right command to the server
-  } 
+  } else if (key === "1") {
+    connection.write("Say: Hello!"); // send "Hello!" to the server
+  } else if (key === "2") {
+    connection.write("Say: Nice move!"); // send "Nice move!" to the server
+  } else if (key === "3") {
+    connection.write("Say: GG!"); // send "GG!" to the server
+  } else if (key === "4") {
+    connection.write("Say: Almost had you!"); // send "Almost had you!" to the server
+  } else if (key === "5") {
+    connection.write("Say: Better luck next time!"); // send "Better luck next time!" to the server
+  } else if (key === "6") {
+    connection.write("Say: Woohoo!"); // send "Woohoo!" to the server
+  } else if (key === "7") {
+    connection.write("Say: Yay!"); // send "Yay!" to the server
+  } else if (key === "8") {
+    connection.write("Say: Yeehaw!"); // send "Yeehaw!" to the server
+  } else if (key === "9") {
+    connection.write("Say: Oh no!"); // send "Oh no!" to the server
+  } else if (key === "0") {
+    connection.write("Say: I win!"); // send "I win!" to the server
+  }
 };
 
 // export "setupInput" and "handleUserInput" function
