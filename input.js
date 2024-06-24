@@ -1,3 +1,6 @@
+// import four movement constants from constants.js
+const { MOVE_UP , MOVE_LEFT, MOVE_DOWN , MOVE_RIGHT, MESSAGES } = require("./constants");
+
 // stores the active TCP connection object
 let connection;
 
@@ -17,33 +20,15 @@ const handleUserInput = function(key) {
   if (key === "\u0003") {
     process.exit();
   } else if (key === "w") {
-    connection.write("Move: up"); // send move up command to the server
+    connection.write(MOVE_UP); // send move up command to the server
   } else if (key === "a") {
-    connection.write("Move: left"); // send move left command to the server
+    connection.write(MOVE_LEFT); // send move left command to the server
   } else if (key === "s") {
-    connection.write("Move: down"); // send move down command to the server
+    connection.write(MOVE_DOWN); // send move down command to the server
   } else if (key === "d") {
-    connection.write("Move: right"); // send move right command to the server
-  } else if (key === "1") {
-    connection.write("Say: Hello!"); // send "Hello!" to the server
-  } else if (key === "2") {
-    connection.write("Say: Nice move!"); // send "Nice move!" to the server
-  } else if (key === "3") {
-    connection.write("Say: GG!"); // send "GG!" to the server
-  } else if (key === "4") {
-    connection.write("Say: Almost had you!"); // send "Almost had you!" to the server
-  } else if (key === "5") {
-    connection.write("Say: I'm a snaaaake!"); // send "Better luck next time!" to the server
-  } else if (key === "6") {
-    connection.write("Say: Woohoo!"); // send "Woohoo!" to the server
-  } else if (key === "7") {
-    connection.write("Say: Yay!"); // send "Yay!" to the server
-  } else if (key === "8") {
-    connection.write("Say: Yeehaw!"); // send "Yeehaw!" to the server
-  } else if (key === "9") {
-    connection.write("Say: Oh no!"); // send "Oh no!" to the server
-  } else if (key === "0") {
-    connection.write("Say: I win!"); // send "I win!" to the server
+    connection.write(MOVE_RIGHT); // send move right command to the server
+  } else if (MESSAGES[key]) {
+    connection.write(MESSAGES[key]); // send corresponding message to the server
   }
 };
 
