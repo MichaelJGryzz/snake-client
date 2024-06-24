@@ -1,10 +1,13 @@
 const net = require("net");
 
+// import IP and PORT constants from constants.js
+const { IP , PORT } = require("./constants");
+
 // establishes a connection with the game server
 const connect = function() {
   const conn = net.createConnection({
-    host: 'localhost',
-    port: 50541
+    host: IP,
+    port: PORT
   });
 
   // interpret incoming data as text
@@ -27,8 +30,8 @@ const connect = function() {
     // send player initials to the server
     conn.write("Name: MJG");
 
-    // send move up command to the server
-    // conn.write("Move: up");
+    // uncomment below if you want to test the "up" movement command directly on connection
+    // conn.write(MOVE_UP);
     
   });
 
@@ -36,4 +39,4 @@ const connect = function() {
 };
 
 // export "connect" function
-module.exports = connect;
+module.exports = { connect };
