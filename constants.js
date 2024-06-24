@@ -5,10 +5,10 @@ const IP = 'localhost';
 const PORT = 50541;
 
 // constants for movement
-const MOVE_UP = "Move: Up";
-const MOVE_LEFT = "Move: Left";
-const MOVE_DOWN = "Move: Down";
-const MOVE_RIGHT = "Move: Right";
+const MOVE_UP = "Move: up";
+const MOVE_LEFT = "Move: left";
+const MOVE_DOWN = "Move: down";
+const MOVE_RIGHT = "Move: right";
 
 // object to store canned messages
 const MESSAGES = {
