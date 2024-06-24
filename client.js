@@ -1,6 +1,6 @@
 const net = require("net");
 
-// import IP and PORT constants from constants.js
+// import IP, PORT and PLAYER_INITIALS constants from constants.js
 const { IP , PORT , PLAYER_INITIALS } = require("./constants");
 
 // establishes a connection with the game server
